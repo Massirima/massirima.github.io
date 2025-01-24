@@ -1,0 +1,158 @@
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+*{
+font-family: 'Montserrat';
+}
+body{
+    margin: 0 auto;
+}
+/* haut de page  */
+header{
+    display: flex;
+    align-items: center;
+}
+header img{
+    width: 130px;
+}
+section.top-page{
+    background: url('./images/bg.jpg');
+    background-size: cover;
+    height: 80vh;
+    padding: 25px;
+}
+/* menu de navigation */
+nav.nav{
+    display: flex;
+    width: 400px;
+    margin-left: 30px;
+    list-style: none;
+    color: aliceblue;
+    justify-content: space-between;
+   
+}
+
+/* slogan */
+.grandtitre{
+    font-family: 'Verdana';
+    color: aliceblue;
+    font-size: 80px;
+    padding: 20px 50px;
+    font-weight: 100;
+}
+
+/* scroll */
+.landingpage{
+    padding: 20px 50px;
+}
+.scroll-bas{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 160px;
+}
+/* services */
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+.sercicesitem{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.servicedetail{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+.iconesuse{
+    font-size: 50px;
+    color: #ADD981;
+}
+
+/* Meilleur ventes */
+.title{
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    background-color: #ADD981;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+.meilleureplantes{
+    margin: 50px;
+
+}
+.meilleureplantes{
+    display: flex;
+    min-height: 500px;
+    background-color: blue;
+    flex-wrap: wrap;
+}
+.platesbox{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+}
+.nogrid{
+    min-width: 350px;
+    height: 500px;
+    flex: 1;
+}
+.pl1{
+    background-image: url(images/nos_meilleures_ventes/1.jpg);
+}
+.pl2{
+    background-image: url(images/nos_meilleures_ventes/2.jpg);
+}
+.pl3{
+    background-image: url(images/nos_meilleures_ventes/3.jpg);
+}
+.pl4{
+    background-image: url(images/nos_meilleures_ventes/4.jpg);
+}
+.plantedetails{
+    background-color: aquamarine;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 20px;
+}
+.plat-nom{
+    font-size: 22px;
+    font-weight: 600;
+}
+.plat-prix{
+    color: #ADD981;
+    font-weight: 800;
+    line-height: 3px;
+    font-size: 14px;
+}
+/* Nos plantes */
+
+.toutesplts{
+    margin: 100px;
+
+}
+.platgrid1{
+    background-image: url(images/nos_plantes/1.jpg);
+}
+.platgrid2{
+    background-image: url(images/nos_plantes/2.jpg);
+}
+.platgrid3{
+    background-image: url(images/nos_plantes/3.jpg);
+}
+.platgrid4{
+    background-image: url(images/nos_plantes/4.jpg);
+}

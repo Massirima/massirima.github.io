@@ -1,0 +1,716 @@
+/*  @import url ... pour importer une police de google */
+
+
+/* modifier toute la page web */
+ body, * {
+   padding: 0 ;
+   margin:  0 ;
+   box-sizing: border-box;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+ body{
+  height: 100%;
+ }
+ 
+ 
+
+/* haut de page, en tete */
+
+header{
+   position: fixed;
+   background-color: rgb(0, 0, 255); 
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+
+}
+
+
+
+/* texte h1 dans l'en tete */
+header h1{
+    text-transform: uppercase;
+    font-size: 3rem; 
+    color: #fff;
+   /* background-color: rgba(0, 0, 255, 0.74) ; */
+    /*display: inline-block;*/
+}
+header h1:hover{
+    animation: text-flicker-in-glow 3s linear both;
+}
+
+
+
+/* class de la section pour le bienvenue et la presentation du texte */
+.monh2{
+  padding: 5px 0px;
+}
+.monh2 h2{
+  color: #dbc7c7;
+  text-decoration: solid 2px ;
+}
+.welcome{
+    position: relative;
+    margin: 20px auto;
+    padding: 10px 0px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./images/welcome.jpg)  ;
+}
+
+/* image de la section */
+.welcome img{
+    position: relative;
+    top: 28%;
+    left: 65%;
+    width: 27% ;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    animation: shadow-pop-br 0.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/* titre h2 de la section de bienvenue */
+.welcome h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0px;
+    /*position: relative;
+    /*left: 5%;
+    top: 40%;
+    color: rgb(100, 102, 101);
+    animation: text-pop-up-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
+
+}
+@keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc;
+    }
+  }
+  
+/* text en italique de la section de bienvenue */
+
+.welcome h2 em{
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.74);
+}
+
+
+/* barre de navigation */
+
+nav{
+    position: sticky;
+    top: 80px;
+    margin: 20px auto ;
+    background-color: rgb(71, 228, 79);
+    z-index: 3;
+}
+
+/*liste */
+nav ul{
+  margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 10px;
+}
+
+/* liste */ 
+nav ul li {
+    font-size: 1.5rem;
+    color: #0059ff;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color: white;
+}
+
+/* lien de navigation */
+nav ul li a{
+    text-decoration: none;
+}
+
+/* main content style */ 
+main.main-content{
+    width: 100%;
+    max-width:  1000px ;
+    margin: 75px;
+
+
+}
+
+/* Modifier les titre h2 des differentes sections */
+section h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem ;
+    font-size: 1.8rem;
+    color: #0062ff;
+    
+}
+
+
+
+section.section h2:hover{
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+
+/* Modifier les paragraphe des differentes sections */
+section p{
+font-size: 1.4rem;
+
+}
+
+/* Modifier les images a mettre cotes a cote */
+.images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* modifier la position des images */
+
+div.services .row{
+    display: flex;
+
+}
+
+div.services-title{
+    display:  flex ;
+
+    margin-top: 2rem;
+}
+
+.services-title{
+    width: 50px ;
+    margin-right: 15px;
+}
+
+div.services-title h3{
+    font-size: 1.5rem;
+    color: #444 ;
+    position: relative;
+    left: 15px;
+}
+@media  only screen and (max-width: 620px) {
+  body , * , header , section , nav , footer , nav , ul , li , .item {
+    width: 100%;
+  }
+}
+
+/* caroussel effect */
+
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    padding: 0 10px;
+  }
+  
+  .wrapper {
+    width: 100%;
+    height: 200%;
+    
+  }
+
+  .box {
+    position: relative;
+    margin-right: 10%;
+    max-height: 400px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:
+    0 1.4px 1.7px rgba(0, 0, 0, 0.017),
+    0 3.3px 4px rgba(0, 0, 0, 0.024),
+    0 6.3px 7.5px rgba(0, 0, 0, 0.03),
+    0 11.2px 13.4px rgba(0, 0, 0, 0.036),
+    0 20.9px 25.1px rgba(0, 0, 0, 0.043),
+    0 50px 60px rgba(0, 0, 0, 0.06);
+  }
+    
+    .box h2 {
+      position: absolute;
+      color: #fff;
+      z-index: 2;
+      width: 100%;
+      transition: opacity 0.2s, transform 0.3s;
+    }
+    .box p {
+      position: absolute;
+      color: #fff;
+      z-index: 2;
+      width: 100%;
+      transition: opacity 0.2s, transform 0.3s;
+    }
+    
+    h2 {
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
+    
+    p {
+      bottom: 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    
+    .box:hover {
+      transition: all .3s ease-in-out;
+    }
+    
+    .box:hover:before {
+      transition: all .3s ease-in-out;
+    }
+    
+    .box img {
+      position:relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all .3s ease-in-out;
+    }
+     .box img:hover {
+        transition: all .3s ease-in-out;
+      }
+      
+      .box:after {
+        content: '';
+        position: absolute;
+        background-color: rgba(0,0,0,.6);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      
+      .box:hover {
+        transition: all .3s ease-in-out;
+      }
+
+  
+
+    .vintage h2 { 
+      top: 50%;
+      transform: translate3d(0, 60px, 0);
+      text-align: center; 
+      border-style: double;
+      border: 2px;
+    }
+    
+    .vintage p { 
+      opacity: 0;
+      bottom: 0;
+      transform: translate3d(0, -10px, 0);
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    
+    .vintage:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+      z-index: 2;
+      bottom: -100%;
+      left: 0;
+    }
+    
+    
+    .vintage:hover:before {
+      bottom: 0;
+    }
+    
+      .vintage:hover h2 {
+        bottom: 40px;
+        transform: translate3d(0, 5px, 0);
+      }
+      
+     .vintage:hover p {
+        opacity: 1 ;
+        transform: translate3d(0, -10px, 0);
+      }
+
+
+
+  .vintage p a{
+    text-decoration:solid;
+    text-transform: uppercase;    
+    color: #ddd;
+  }
+
+
+/* formulaire */
+form{
+    border: solid 2px #ddd;
+    width: 60%;
+    max-width: 100%;
+    padding: 25px;
+    background-color: rgba(0, 89, 255, 0.596);
+    border-radius: 2rem;
+}
+
+form input[type='text'], form input[type='email'],form textarea{
+    padding: 8px;
+    font-size: 1.2rem;
+    width: 100%;
+    border: solid 2px #ddd;
+    margin: 6px 0px ;
+}
+
+.btt{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+    background-color: #ecedf0;
+    color: #0264f8;
+    padding: 10px 24px;
+    border-radius: 2rem;
+    
+}
+.btt:hover{
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
+.whatsapp{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+     
+}
+.whatsapp img.logo{
+    height: 45px;
+    animation: jello-horizontal 0.9s 1s infinite both;
+}
+@keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  
+.whatsapp span.Phone{
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    animation: jello-horizontal 0.9s 1s infinite both;
+}
+
+div.form{
+    position: relative;
+}
+
+div.form form{
+    position: absolute;
+    left: 25%;
+    margin-top: 10%;
+}
+
+div img.arr{
+    width: 70%;
+    position: absolute;
+    left: 20%;
+    border-radius: 25px;
+    margin-top: 5%;
+}
+
+footer{
+    margin-top: 50%;
+    width: 100%;
+    background-color: #0264f8;
+    color: #fff;
+    height: 50px;
+
+}
+footer p.bas{
+    margin-top: 50%;
+    font-size: 1.2rem ;
+    text-align: center;
+    padding-top: 15px ;
+    
+}
+footer p a{
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+}
+
+
+@keyframes shadow-pop-br {
+        0% {
+          -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+                  box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+          -webkit-transform: translateX(0) translateY(0);
+                  transform: translateX(0) translateY(0);
+        }
+        100% {
+          -webkit-box-shadow: 1px 1px rgba(0, 0, 255, 0.74), 2px 2px rgba(0, 0, 255, 0.74), 3px 3px rgba(0, 0, 255, 0.74), 4px 4px rgba(0, 0, 255, 0.74), 5px 5px rgba(0, 0, 255, 0.74), 6px 6px rgba(0, 0, 255, 0.74), 7px 7px rgba(0, 0, 255, 0.74), 8px 8px ;
+                  box-shadow: 1px 1px rgba(0, 0, 255, 0.74), 2px 2px rgba(0, 0, 255, 0.74), 3px 3px rgba(0, 0, 255, 0.74), 4px 4px rgba(0, 0, 255, 0.74), 5px 5px rgba(0, 0, 255, 0.74), 6px 6px rgba(0, 0, 255, 0.74), 7px 7px rgba(0, 0, 255, 0.74), 8px 8px rgba(0, 0, 255, 0.74);
+          -webkit-transform: translateX(-8px) translateY(-8px);
+                  transform: translateX(-8px) translateY(-8px);
+        }
+      }
+
+      @keyframes text-flicker-in-glow {
+        0% {
+          opacity: 0;
+        }
+       
+        }
+        65% {
+          opacity : 1;
+          text-shadow : 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        75% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        86% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        86.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+
+        section.fbtw {
+          margin-top: 700px;
+          margin-bottom: -60%;
+          padding: 0;
+          font-family: "Arial";
+          margin-left: 20%;
+        }
+      
+        .share{
+          width: 200px;
+          height: 200px;
+          margin: 1em auto;
+          background: #8eec22;
+          text-align: center;
+          border-radius: 100px;
+          overflow: hidden;
+          position: relative;
+        }
+        
+        .share a{
+          display: inline-block;
+          width: 100px;
+          height: 200px;
+          float: left;
+          position: relative;
+          text-indent: -9999px;
+          z-index: 9999;
+        }
+        
+        .share:after{
+          content: "Share";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 40%;
+          font-size: 25px;
+          font-weight: normal;
+          font-style: italic;
+          text-transform: uppercase;
+          color: #333; 
+        }
+        
+        .share a.fb{
+          background: #3c5b9b url(https://cdn1.iconfinder.com/data/icons/social-media-icons-2/83/facebook_64x83.png) no-repeat center;
+          top: -200px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        .share a.tw{
+          background: #28abe1 url(https://cdn1.iconfinder.com/data/icons/social-media-icons-2/83/twitter_64x83.png) no-repeat center;
+          bottom: -200px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        .share:hover a.fb{
+          top: 0;
+        }
+        
+        .share:hover a.tw{
+          bottom: 0;
+        }
+        @media all and (max-width:1000px) {
+          *{ 
+           width: 20 %;
+          }
+          
+        }
+        @media all and (max-width:651px){
+          form input[type='text'], form input[type='email'],form textarea{
+            font-size: 1.2rem;
+            width: 100%;
+            height: 20%;
+            border: solid 2px #ddd;
+          }
+          form{
+            border: solid 2px #ddd;
+            width: 150%;
+            background-color: rgba(0, 89, 255, 0.596);
+            border-radius: 2rem;
+            margin-right: 0px;
+          }
+            div img.arr{
+              visibility: hidden;
+              position: absolute;
+              left: 20%;
+              border-radius: 25px;
+              margin-top: 5%;
+          }
+          .whatsapp span.Phone{
+            font-size: 20px;
+            color: #fff;
+            animation: jello-horizontal 0.9s 1s infinite both;
+        }
+        }
+        @media all and (max-width : 1092px) {
+
+          section.section h2{
+            font-weight: 300px ;
+            width: 100%;
+          }
+          main.main-content{
+            width: 50%
+          }
+          
+        }
+
+         @media all and (max-width : 329px){
+          header.pagetitre{
+        
+            font-size-adjust: 10px;
+            
+          }
+        
+        }
+        @media all and (max-width : 630px){
+          a.tt {
+            font-size: 15px;
+          }
+          p.bas {
+            font-size: 1px;
+          }
+        }
+        @media screen and (max-width: 880px) {
+          .wrapper {
+            width: 50%;
+          }
+        }
+        
+        @media screen and (max-width: 520px) {
+          .wrapper {
+            width: 100%;
+          }
+        }

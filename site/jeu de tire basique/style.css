@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+*{
+    margin: 0;
+    padding: 0 ;
+    
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    background-color: blue;
+    font-size: 20px;
+    /* font-weight: bolder; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.navbar-brand img{
+
+    padding-bottom: 5px;
+}
+
+
+#game-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Rubik Mono One", monospace;
+}
+.infos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color:#000000;
+}
+.container{
+    height: 400px;
+    width: 500px;
+    border: 1px solid #fe0000 ;
+    cursor: crosshair;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #000000;
+    border-radius: 6px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(./yrkGs9.png);
+}
+#target {
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    transition: 0.25s;
+    transition: anime 10s infinite;
+}
+
+button{
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: blue;
+    border: 0;
+    color: beige;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Rubik Mono One", monospace;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: #fe0000;
+}
+
+@keyframes anime {
+    to{
+        transform:translateY(-200) rotate(90deg);
+    }
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Playwrite AU SA', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #43cf34;
+    min-height: 100vh;
+}
+section{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 0 20 #030303;
+    overflow: hidden;
+}
+h1{
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.full{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#entre{
+    width: 85%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    outline: 0;
+}
+ #add{
+    width: 15%;
+    padding: 7px;
+    border: none;
+    border-radius: 0 6px 6px 0 ;
+    font-size: 20px;
+    color: #fff;
+    background-color: #43cf34;
+ }
+ .para_style{
+    margin: 10px 0;
+    padding: 10px 0;
+    padding-left: 5px;
+    border: none;
+    border-radius: 6px;
+    color :#fff;
+    background-color: #4dcf3f;
+    word-break: break-all;
+    cursor: pointer;
+    animation: anime 0.3s linear;
+ }
+ .para_style:last-child{
+    margin-bottom: 0;
+ }
+ @keyframes anime {
+    from{
+    transform: translateY(50px);
+}
+ }
+ .para-click{
+    background-color: #c73e14;
+    text-decoration: line-through;
+ }
